@@ -54,6 +54,8 @@ public class PlayerMovement : MonoBehaviour {
 
 		if (Input.GetKey (KeyCode.Space)) {
 			anim.SetTrigger ("jump");
+		} else if (Input.GetKey (KeyCode.F1)) {
+			anim.SetTrigger ("lightAttack");
 		}
 	}
 
