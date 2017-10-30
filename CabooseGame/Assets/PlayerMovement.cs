@@ -50,13 +50,19 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Animating(float h, float v)
 	{
-		anim.SetBool ("isWalking", isWalking(h, v));
-
 		if (Input.GetKey (KeyCode.Space)) {
 			anim.SetTrigger ("jump");
 		} else if (Input.GetKey (KeyCode.F1)) {
 			anim.SetTrigger ("lightAttack");
-		}
+		} else if(Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow))
+        {
+            if(!anim.GetCurrentAnimatorStateInfo(0).IsName("isWalking"))
+                anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
 	}
 
 	private bool isWalking(float h, float v) 
