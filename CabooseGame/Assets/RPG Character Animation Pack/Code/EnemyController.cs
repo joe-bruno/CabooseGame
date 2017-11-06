@@ -552,6 +552,11 @@ public class EnemyController : MonoBehaviour{
 		yield return null;
 	}
 
+    public void enemyDeath()
+    {
+        StartCoroutine(_Death());
+    }
+
 	public IEnumerator _Revive(){
 		animator.SetTrigger("Revive1Trigger");
 		isDead = false;

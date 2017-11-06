@@ -48,10 +48,9 @@ public class EnemyAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks && playerInRange /*&&  enemyHealth.currentHealth > 0*/)
+        if(timer >= timeBetweenAttacks && playerInRange &&  enemyHealth.currentHealth > 0)
         {
             Attack ();
-            Debug.Log("Enemy Tried to Attack");
         }
 
         if(playerHealth.currentHealth <= 0)

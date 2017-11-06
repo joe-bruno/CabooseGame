@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 731
-  m_MinSize: {x: 707, y: 471}
-  m_MaxSize: {x: 18002, y: 14021}
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 6129
+  controlID: 1140
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -121,10 +121,10 @@ MonoBehaviour:
     y: 0
     width: 628
     height: 731
-  m_MinSize: {x: 202, y: 342}
+  m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 6130
+  controlID: 1119
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,15 +143,15 @@ MonoBehaviour:
     y: 0
     width: 628
     height: 376
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 7}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 5}
   m_Panes:
   - {fileID: 5}
   - {fileID: 6}
   - {fileID: 7}
-  m_Selected: 2
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 2
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -176,7 +176,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 708
+    width: 626
     height: 355
   m_SceneLighting: 1
   lastFramingTime: 3481.696879280341
@@ -286,7 +286,7 @@ MonoBehaviour:
     - {fileID: 110795260, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
     - {fileID: 110766550, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
     m_ValueSerializationHelper:
-    - {x: 82.20001, y: 245}
+    - {x: 100.20003, y: 250}
     - {x: 616.8, y: 285}
     - {x: 412.8, y: 149.1}
     - {x: 373.40002, y: 141.1}
@@ -296,10 +296,6 @@ MonoBehaviour:
     type: 2}
   m_BreadCrumbs:
   - m_Target: {fileID: 110700000, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  - m_Target: {fileID: 110790042, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
-  - m_Target: {fileID: 110766550, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -359,7 +355,7 @@ MonoBehaviour:
   m_MinSize: {x: 230, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 6079
+  controlID: 1141
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -413,9 +409,9 @@ MonoBehaviour:
     height: 433
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fc310000
-    m_LastClickedID: 12796
-    m_ExpandedIDs: 90d8ffff1afcffff00000000
+    m_SelectedIDs: 54320000
+    m_LastClickedID: 12884
+    m_ExpandedIDs: 1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -501,19 +497,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/RPG Character Animation Pack/Animations/Unarmed
+    - Assets/Scripts/Enemy
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/RPG Character Animation Pack/Animations/Unarmed
+  - Assets/Scripts/Enemy
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Pedro J. Rivera\Desktop\Game\CabooseGame
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 31}
-    m_SelectedIDs: a8300000
-    m_LastClickedID: 12456
-    m_ExpandedIDs: 0000000002270000c6290000de290000a62a0000542b0000f62b0000762d0000f22e000082300000783100001034000012340000143400001634000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 257}
+    m_SelectedIDs: 162f0000
+    m_LastClickedID: 12054
+    m_ExpandedIDs: 0000000004270000d2290000ea290000b22a0000602b0000022c0000882d0000062f0000963000008c3100004a3400004c3400004e3400005034000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -541,7 +537,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000002270000c6290000de290000a62a0000542b0000f62b0000762d0000f22e000082300000783100001034000012340000143400001634000000ca9a3bffffff7f
+    m_ExpandedIDs: 0000000004270000d2290000ea290000b22a0000602b0000022c0000882d0000062f0000963000008c3100004a3400004c3400004e3400005034000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,8 +562,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fc310000
-    m_LastClickedInstanceID: 12796
+    m_SelectedInstanceIDs: 54320000
+    m_LastClickedInstanceID: 12884
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 8caa0000
     m_RenameOverlay:
@@ -614,8 +610,8 @@ MonoBehaviour:
     y: 0
     width: 448
     height: 731
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -648,7 +644,7 @@ MonoBehaviour:
     y: 92
     width: 446
     height: 710
-  m_ScrollPosition: {x: 0, y: 45.95508}
+  m_ScrollPosition: {x: 0, y: 108.95508}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: 212
