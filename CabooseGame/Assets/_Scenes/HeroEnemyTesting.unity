@@ -367,64 +367,11 @@ CanvasRenderer:
 GameObject:
   m_PrefabParentObject: {fileID: 100004, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
   m_PrefabInternal: {fileID: 1797179149}
---- !u!114 &694961294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694961292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 231f5658709602d4bb3cd335ddf56465, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startingHealth: 100
-  currentHealth: 0
-  healthSlider: {fileID: 143263657}
-  damageImage: {fileID: 1423880169}
-  flashSpeed: 5
-  flashColour: {r: 1, g: 0, b: 0, a: 0.1}
---- !u!114 &694961298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 694961292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2bdc90ad2a8dda84ba3aad7b76d432bd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  targetDashDirection: {x: 0, y: 0, z: 0}
-  sceneCamera: {fileID: 2018430736}
-  useNavMesh: 0
-  goal: {fileID: 0}
-  player: {fileID: 0}
-  gravity: -9.8
-  canJump: 0
-  isGrounded: 0
-  jumpSpeed: 12
-  doublejumpSpeed: 12
-  canDoubleJump: 0
-  isDoubleJumping: 0
-  inAirSpeed: 8
-  rollSpeed: 8
-  rollduration: 0
-  canMove: 1
-  walkSpeed: 1.35
-  runSpeed: 6
-  weapon: 0
-  isRelax: 0
-  canAction: 1
-  isStrafing: 0
-  isDead: 0
-  knockbackMultiplier: 1
 --- !u!4 &694961299 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400004, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
   m_PrefabInternal: {fileID: 1797179149}
---- !u!114 &694961300
+--- !u!114 &694961301
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -432,9 +379,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 694961292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35bb9f4d0dc341c47848bb9604b214a6, type: 3}
+  m_Script: {fileID: 11500000, guid: f51ee94caa5588342a779525e62050f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0.5
+  attackDamage: 50
 --- !u!1 &707042789
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +598,9 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 11400000, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
     - {fileID: 11459736, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
+    - {fileID: 114591118704631220, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
+    - {fileID: 114571647992545464, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
+    - {fileID: 114296662463436096, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1243937979
@@ -1001,6 +953,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.2
   m_Center: {x: 0, y: 1.5, z: 0}
+--- !u!114 &1769241845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1769241835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9b9d14572410594cb85d40eedfb150c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  sinkSpeed: 2.5
+  scoreValue: 10
+  deathClip: {fileID: 0}
 --- !u!1001 &1797179149
 Prefab:
   m_ObjectHideFlags: 0
@@ -1049,6 +1017,21 @@ Prefab:
       value: 
       objectReference: {fileID: 1769241835}
     - target: {fileID: 11400000, guid: b1cc94d26cd016d479aa5b522d88da0a, type: 2}
+      propertyPath: sceneCamera
+      value: 
+      objectReference: {fileID: 2018430736}
+    - target: {fileID: 114571647992545464, guid: b1cc94d26cd016d479aa5b522d88da0a,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 143263657}
+    - target: {fileID: 114571647992545464, guid: b1cc94d26cd016d479aa5b522d88da0a,
+        type: 2}
+      propertyPath: damageImage
+      value: 
+      objectReference: {fileID: 1423880169}
+    - target: {fileID: 114591118704631220, guid: b1cc94d26cd016d479aa5b522d88da0a,
+        type: 2}
       propertyPath: sceneCamera
       value: 
       objectReference: {fileID: 2018430736}
