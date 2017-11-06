@@ -95,11 +95,13 @@ public class EnemyController : MonoBehaviour{
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
-	#endregion
+    #endregion
 
-	#region UpdateAndInput
+    #region UpdateAndInput
+    float range = 2.5f;
+    float dist;
 
-	void Update(){
+    void Update(){
 		//make sure there is animator on character
 		if(animator){
 			if(canMove && !isDead && !useNavMesh){
@@ -152,7 +154,11 @@ public class EnemyController : MonoBehaviour{
 				{
 					RaycastHit hit;
 					if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100)) {
-						agent.destination = hit.point;
+                        dist = Vector3.Distance(player.transform.position, transform.position);
+                        if (dist > range)
+                        {
+                            agent.destination = hit.point;
+                        }
 					}
                     
 				}

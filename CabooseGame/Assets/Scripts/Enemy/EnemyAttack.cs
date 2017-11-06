@@ -15,6 +15,9 @@ public class EnemyAttack : MonoBehaviour
     EnemyHealth enemyHealth;
     bool playerInRange;
     float timer;
+    float range=3;
+    float distance;
+
 
 
     void Awake ()
@@ -47,8 +50,9 @@ public class EnemyAttack : MonoBehaviour
     void Update ()
     {
         timer += Time.deltaTime;
-
-        if(timer >= timeBetweenAttacks && playerInRange /*&&  enemyHealth.currentHealth > 0*/)
+        distance = Vector3.Distance(player.transform.position, transform.position);
+        Debug.Log("Distance to other: " + distance);
+        if (timer >= timeBetweenAttacks && distance<=range  /*&&  enemyHealth.currentHealth > 0*/)
         {
             Attack ();
             Debug.Log("Enemy Tried to Attack");
@@ -68,6 +72,7 @@ public class EnemyAttack : MonoBehaviour
         if(playerHealth.currentHealth > 0)
         {
             playerHealth.TakeDamage (attackDamage);
+            anim.SetTrigger("Attack3Trigger");
         }
     }
 }
