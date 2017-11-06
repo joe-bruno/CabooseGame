@@ -55,7 +55,7 @@ public class PlayerController : MonoBehaviour{
 	public float walkSpeed = 1.35f;
 	float moveSpeed;
 	public float runSpeed = 6f;
-	float rotationSpeed = 40f;
+	float rotationSpeed = 5f;
   
 	float x;
 	float z;
