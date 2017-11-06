@@ -13,10 +13,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 43
     width: 1458
     height: 821
+=======
+    x: 8
+    y: 51
+    width: 1520
+    height: 765
+>>>>>>> origin/enemyDies
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
@@ -41,8 +48,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1458
     height: 821
+=======
+    width: 1520
+    height: 765
+>>>>>>> origin/enemyDies
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
@@ -61,7 +73,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1458
+=======
+    width: 1520
+>>>>>>> origin/enemyDies
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -81,8 +97,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 801
     width: 1458
+=======
+    y: 745
+    width: 1520
+>>>>>>> origin/enemyDies
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -105,12 +126,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1458
     height: 771
   m_MinSize: {x: 713, y: 492}
   m_MaxSize: {x: 18008, y: 14042}
   vertical: 0
   controlID: 33
+=======
+    width: 1520
+    height: 715
+  m_MinSize: {x: 713, y: 492}
+  m_MaxSize: {x: 18008, y: 14042}
+  vertical: 0
+  controlID: 139
+>>>>>>> origin/enemyDies
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,12 +159,21 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 595
     height: 771
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
   controlID: 34
+=======
+    width: 620
+    height: 715
+  m_MinSize: {x: 202, y: 442}
+  m_MaxSize: {x: 4002, y: 8042}
+  vertical: 1
+  controlID: 48
+>>>>>>> origin/enemyDies
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -151,8 +190,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 595
     height: 397
+=======
+    width: 620
+    height: 368
+>>>>>>> origin/enemyDies
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -177,11 +221,19 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 397
     width: 595
     height: 374
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    y: 368
+    width: 620
+    height: 347
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> origin/enemyDies
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -203,10 +255,17 @@ MonoBehaviour:
   - {fileID: 11}
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 595
     y: 0
     width: 437
     height: 771
+=======
+    x: 620
+    y: 0
+    width: 456
+    height: 715
+>>>>>>> origin/enemyDies
   m_MinSize: {x: 234, y: 492}
   m_MaxSize: {x: 10004, y: 14042}
   vertical: 1
@@ -227,8 +286,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 437
     height: 479
+=======
+    width: 456
+    height: 444
+>>>>>>> origin/enemyDies
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
@@ -251,9 +315,15 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
     y: 479
     width: 437
     height: 292
+=======
+    y: 444
+    width: 456
+    height: 271
+>>>>>>> origin/enemyDies
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
   m_ActualView: {fileID: 18}
@@ -275,10 +345,17 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1032
     y: 0
     width: 426
     height: 771
+=======
+    x: 1076
+    y: 0
+    width: 444
+    height: 715
+>>>>>>> origin/enemyDies
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 19}
@@ -309,10 +386,17 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 489
     width: 593
     height: 353
+=======
+    x: 8
+    y: 468
+    width: 618
+    height: 326
+>>>>>>> origin/enemyDies
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
@@ -321,10 +405,17 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -296.5
     m_HBaseRangeMax: 296.5
     m_VBaseRangeMin: -168
     m_VBaseRangeMax: 168
+=======
+    m_HBaseRangeMin: -309
+    m_HBaseRangeMax: 309
+    m_VBaseRangeMin: -154.5
+    m_VBaseRangeMax: 154.5
+>>>>>>> origin/enemyDies
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -341,25 +432,43 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 593
       height: 336
     m_Scale: {x: 1, y: 1}
     m_Translation: {x: 296.5, y: 168}
+=======
+      width: 618
+      height: 309
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 309, y: 154.5}
+>>>>>>> origin/enemyDies
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -296.5
       y: -168
       width: 593
       height: 336
+=======
+      x: -309
+      y: -154.5
+      width: 618
+      height: 309
+>>>>>>> origin/enemyDies
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 593, y: 353}
+=======
+  m_LastWindowPixelSize: {x: 618, y: 326}
+>>>>>>> origin/enemyDies
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
@@ -385,19 +494,32 @@ MonoBehaviour:
   m_DepthBufferBits: 32
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 92
     width: 593
     height: 376
+=======
+    x: 8
+    y: 100
+    width: 618
+    height: 347
+>>>>>>> origin/enemyDies
   m_SceneLighting: 1
-  lastFramingTime: 3481.696879280341
+  lastFramingTime: 468.37140888954366
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 40.830658, y: 25.777328, z: 10.115072}
     speed: 2
     m_Value: {x: 40.830658, y: 25.777328, z: 10.115072}
+=======
+    m_Target: {x: 20, y: 0, z: -2.5}
+    speed: 2
+    m_Value: {x: 20, y: 0, z: -2.5}
+>>>>>>> origin/enemyDies
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -424,9 +546,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.31545615, y: 0.6539227, z: -0.59327525, w: -0.3477027}
   m_Size:
+<<<<<<< HEAD
     m_Target: 22.361364
     speed: 2
     m_Value: 22.361364
+=======
+    m_Target: 5.466396
+    speed: 2
+    m_Value: 5.466396
+>>>>>>> origin/enemyDies
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -537,6 +665,7 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 597
     y: 92
     width: 433
@@ -546,6 +675,17 @@ MonoBehaviour:
     m_SelectedIDs: 44ad0000
     m_LastClickedID: 44356
     m_ExpandedIDs: dcedffff00000000
+=======
+    x: 630
+    y: 100
+    width: 452
+    height: 423
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 827affff
+    m_LastClickedID: -34174
+    m_ExpandedIDs: 1afcffff0000000098320000
+>>>>>>> origin/enemyDies
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,10 +730,17 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 597
     y: 571
     width: 433
     height: 271
+=======
+    x: 630
+    y: 544
+    width: 452
+    height: 250
+>>>>>>> origin/enemyDies
   m_SearchFilter:
     m_NameFilter: 
     m_ClassNames: []
@@ -606,19 +753,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
+<<<<<<< HEAD
     - Assets
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
   - Assets
+=======
+    - Assets/RPG Character Animation Pack/Prefabs
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets/RPG Character Animation Pack/Prefabs
+>>>>>>> origin/enemyDies
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\micha\Documents\Fall2017 School\3d Game Design\CabooseGame\CabooseGame
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 3ca30000
     m_LastClickedID: 41788
     m_ExpandedIDs: 000000003ca30000d8a50000eea50000a8a6000048a70000daa700004ea90000bcaa00001eac0000e8ac0000b4ad0000b6ad0000b8ad0000baad000000ca9a3bffffff7f
+=======
+    scrollPos: {x: 0, y: 359}
+    m_SelectedIDs: 4c280000
+    m_LastClickedID: 10316
+    m_ExpandedIDs: 0000000004270000f0290000082a0000e22a0000922b00003a2c0000da2d0000502f0000563000000831000006320000c8340000ca340000cc340000ce34000000ca9a3bffffff7f
+>>>>>>> origin/enemyDies
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -646,7 +808,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000003ca30000d8a50000eea50000a8a6000048a70000daa700004ea90000bcaa00001eac0000e8ac0000b4ad0000b6ad0000b8ad0000baad0000
+=======
+    m_ExpandedIDs: 0000000004270000f0290000082a0000e22a0000922b00003a2c0000da2d0000682f00000831000006320000c8340000ca340000cc340000ce340000
+>>>>>>> origin/enemyDies
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -723,10 +889,17 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 1034
     y: 92
     width: 424
     height: 750
+=======
+    x: 1086
+    y: 100
+    width: 442
+    height: 694
+>>>>>>> origin/enemyDies
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
