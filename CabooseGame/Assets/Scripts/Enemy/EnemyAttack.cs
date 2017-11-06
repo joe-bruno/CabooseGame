@@ -52,7 +52,7 @@ public class EnemyAttack : MonoBehaviour
         timer += Time.deltaTime;
         distance = Vector3.Distance(player.transform.position, transform.position);
         Debug.Log("Distance to other: " + distance);
-        if (timer >= timeBetweenAttacks && distance<=range  /*&&  enemyHealth.currentHealth > 0*/)
+        if (timer >= timeBetweenAttacks && distance<=range  &&  enemyHealth.currentHealth > 0)
         {
             Attack ();
             Debug.Log("Enemy Tried to Attack");
