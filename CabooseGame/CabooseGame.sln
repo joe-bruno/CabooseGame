@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabooseGame", "Assembly-CSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabooseGame", "Assembly-CSharp-firstpass.csproj", "{BF5DD034-2888-9BC8-2F16-BD57C86ECCEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CabooseGame", "Assembly-CSharp-Editor-firstpass.csproj", "{B9916949-00CF-6904-CF3D-DA45C2BA87FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{BF5DD034-2888-9BC8-2F16-BD57C86ECCEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF5DD034-2888-9BC8-2F16-BD57C86ECCEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF5DD034-2888-9BC8-2F16-BD57C86ECCEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9916949-00CF-6904-CF3D-DA45C2BA87FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9916949-00CF-6904-CF3D-DA45C2BA87FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9916949-00CF-6904-CF3D-DA45C2BA87FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9916949-00CF-6904-CF3D-DA45C2BA87FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

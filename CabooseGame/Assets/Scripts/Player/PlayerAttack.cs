@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour
 {
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
-
+    public bool playerIsAttacking = false;
 
     Animator anim;
     GameObject enemy;
@@ -34,6 +34,10 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
+    public bool GetIsAttacking()
+    {
+        return playerIsAttacking;
+    }
 
     void OnTriggerExit (Collider other)
     {
@@ -48,14 +52,21 @@ public class PlayerAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks && enemyInRange &&  playerHealth.currentHealth > 0)
+        if(timer >= timeBetweenAttacks &&  playerHealth.currentHealth > 0)
         {
-            Attack ();
+            if (Input.GetMouseButtonUp(0)) {
+                Attack();
+            }
         }
 
-        if(enemyHealth.currentHealth <= 0)
+        if (enemyHealth.currentHealth <= 0)
         {
             //anim.SetTrigger ("PlayerDead");
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("standing_melee_attack_360_low"))
+        {
+            playerIsAttacking = false;
         }
     }
 
@@ -64,9 +75,13 @@ public class PlayerAttack : MonoBehaviour
     {
         timer = 0f;
 
-        if(enemyHealth.currentHealth > 0)
+        if(playerHealth.currentHealth > 0)
         {
-            enemyHealth.TakeDamage (attackDamage);
+            playerIsAttacking = true;
+            anim.SetTrigger("Attack6Trigger");
+            //enemyHealth.TakeDamage (attackDamage);
+            
+            
         }
     }
 }

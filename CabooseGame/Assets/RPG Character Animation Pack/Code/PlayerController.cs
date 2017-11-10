@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour{
 	//Weapon and Shield
 	[HideInInspector]
 	public Weapon weapon;
-	int rightWeapon = 0;
+	int rightWeapon = 2;
 	int leftWeapon = 0;
 	[HideInInspector]
 	public bool isRelax = false;
@@ -147,6 +147,7 @@ public class PlayerController : MonoBehaviour{
 				isStrafing = false;
 				animator.SetBool("Strafing", false);
 			}
+            
 			//Navmesh
 			if(Input.GetMouseButtonDown(0))
 			{

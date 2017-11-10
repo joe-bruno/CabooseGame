@@ -54,6 +54,7 @@ public class EnemyHealth : MonoBehaviour
        // enemyAudio.Play ();
 
         currentHealth -= amount;
+        anim.SetTrigger("GetHit1Trigger");
             
        // hitParticles.transform.position = hitPoint;
        // hitParticles.Play();
