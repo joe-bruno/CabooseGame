@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
     EnemyController enemyController;
+    enemyWeapon weapon;
 
 
     Animator anim;
@@ -26,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
         // hitParticles = GetComponentInChildren <ParticleSystem> ();
         enemyController = GetComponent<EnemyController>();
         capsuleCollider = GetComponent <CapsuleCollider> ();
+        weapon = GetComponentInChildren<enemyWeapon>();
 
 
         currentHealth = startingHealth;
@@ -74,7 +76,8 @@ public class EnemyHealth : MonoBehaviour
 
         enemyController.enemyDeath();
         enemyController.enabled = false;
-        
+
+        weapon.weaponActive = false;
 
         /* anim.SetTrigger ("Dead");
 

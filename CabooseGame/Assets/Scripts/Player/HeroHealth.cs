@@ -13,6 +13,7 @@ public class HeroHealth : MonoBehaviour
     //public AudioClip deathClip;
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+    Rigidbody playerRBody;
 
 
     Animator anim;
@@ -30,6 +31,7 @@ public class HeroHealth : MonoBehaviour
         playerMovement = GetComponent <PlayerController> ();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
+        playerRBody = GetComponent<Rigidbody>();
         
     }
 
@@ -50,6 +52,7 @@ public class HeroHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
+        Debug.Log("TakeDamage Was Called");
         damaged = true;
 
         currentHealth -= amount;
@@ -74,8 +77,9 @@ public class HeroHealth : MonoBehaviour
         //anim.SetTrigger ("Die");
 
         //playerAudio.clip = deathClip;
-       // playerAudio.Play ();
-
+        // playerAudio.Play ();
+        playerRBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezePositionY;
+        playerRBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
         playerMovement.heroDeath();
         playerMovement.enabled = false;
         //playerShooting.enabled = false;

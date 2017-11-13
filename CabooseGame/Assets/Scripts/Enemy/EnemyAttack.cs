@@ -66,7 +66,7 @@ public class EnemyAttack : MonoBehaviour
 
         if(playerHealth.currentHealth > 0)
         {
-            playerHealth.TakeDamage (attackDamage);
+            //playerHealth.TakeDamage (attackDamage);
             anim.SetTrigger("Attack3Trigger");
         }
     }

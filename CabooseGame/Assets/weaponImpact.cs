@@ -14,7 +14,7 @@ public class weaponImpact : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        playerIsAttacking = player.GetIsAttacking();
+        //playerIsAttacking = player.GetIsAttacking();
     }
     
     void OnTriggerEnter(Collider other)
