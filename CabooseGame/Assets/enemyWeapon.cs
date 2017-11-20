@@ -23,10 +23,8 @@ public class enemyWeapon : MonoBehaviour {
     
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collider Detected");
         if ((other.gameObject.tag == "Player")&&(weaponActive))
-        {
-            Debug.Log("Collider is Player");
+        {  
             HeroHealth hHealth = other.gameObject.GetComponent<HeroHealth>();
             hHealth.TakeDamage(attackPower);
         }

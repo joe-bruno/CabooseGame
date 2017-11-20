@@ -16,8 +16,10 @@ public class EnemyHealth : MonoBehaviour
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
     CapsuleCollider capsuleCollider;
+    PlayerAttack playerAtt;
     bool isDead;
     bool isSinking;
+    int swingID;
 
 
     void Awake ()
@@ -28,8 +30,8 @@ public class EnemyHealth : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
         capsuleCollider = GetComponent <CapsuleCollider> ();
         weapon = GetComponentInChildren<enemyWeapon>();
-
-
+        playerAtt = GetComponent<PlayerAttack>();
+        swingID = 0;
         currentHealth = startingHealth;
     }
 
@@ -48,20 +50,24 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-    public void TakeDamage (int amount)
+    public void TakeDamage(int amount, int newSwingID)
     {
         if(isDead)
             return;
 
-       // enemyAudio.Play ();
-
+        // enemyAudio.Play ();
+       if (newSwingID!=swingID)
+        {
         currentHealth -= amount;
         anim.SetTrigger("GetHit1Trigger");
-            
-       // hitParticles.transform.position = hitPoint;
-       // hitParticles.Play();
+            swingID = newSwingID;
+        }
+        
+       
+        // hitParticles.transform.position = hitPoint;
+        // hitParticles.Play();
 
-        if(currentHealth <= 0)
+        if (currentHealth <= 0)
         {
             Death ();
         }

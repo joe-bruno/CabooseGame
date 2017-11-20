@@ -51,17 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Animations\Melee Axe Pack\Demo\CameraScroll.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\RollerBall\Scripts\Ball.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
-     <Compile Include="Assets\Downloaded Assets\Mixamo\Melee Axe Pack\Demo\CameraScroll.cs" />
      <Compile Include="Assets\Downloaded Assets\Pigman\test_scene\camera.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Code\CameraController.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Code\EnemyController.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Code\MoveTo.cs" />
-     <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Code\PlayerController.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Code\RPGCharacterControllerFREE.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Code\RPGCharacterGUI.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Bloom.cs" />
@@ -88,6 +87,7 @@
      <Compile Include="Assets\Scripts\Player\HeroCharacterGUI.cs" />
      <Compile Include="Assets\Scripts\Player\HeroHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerAttack.cs" />
+     <Compile Include="Assets\Scripts\Player\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement2.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />

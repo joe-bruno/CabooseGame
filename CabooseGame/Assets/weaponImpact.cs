@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class weaponImpact : MonoBehaviour {
-    PlayerAttack player;
+    PlayerAttack playerAttack;
     public int attackPower = 50;
     bool playerIsAttacking;
+    int swingID;
+    int newSwingID;
+    
     
 	// Use this for initialization
 	void Start () {
-       player = GetComponent<PlayerAttack>();
+       playerAttack = GetComponentInParent<PlayerAttack>();
+
+       swingID = 0;
     }
 	
 	// Update is called once per frame
@@ -21,11 +26,10 @@ public class weaponImpact : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
-            //if (playerIsAttacking) {
-                EnemyHealth eHealth = other.gameObject.GetComponent<EnemyHealth>();
-                eHealth.TakeDamage(attackPower);
-            //}
-
+            swingID = playerAttack.GetSwingID();
+            
+            EnemyHealth eHealth = other.gameObject.GetComponent<EnemyHealth>();
+            eHealth.TakeDamage(attackPower,swingID);
         }
     }
 }

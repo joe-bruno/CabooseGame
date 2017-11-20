@@ -10,6 +10,7 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerHealth>();
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
@@ -21,7 +22,7 @@ public class EnemyManager : MonoBehaviour
             return;
         }
 
-        int spawnPointIndex = Random.Range (0, spawnPoints.Length);
+        int spawnPointIndex = 0;
 
         Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }

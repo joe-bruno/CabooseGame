@@ -8,6 +8,7 @@ public class PlayerAttack : MonoBehaviour
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
     public bool playerIsAttacking = false;
+    public int swingID;
 
     Animator anim;
     GameObject enemy;
@@ -17,18 +18,19 @@ public class PlayerAttack : MonoBehaviour
     float timer;
 
 
-    void Awake ()
+    void Awake()
     {
-        enemy = GameObject.FindGameObjectWithTag ("Enemy");
-        enemyHealth = enemy.GetComponent <EnemyHealth> ();
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        enemyHealth = enemy.GetComponent<EnemyHealth>();
         playerHealth = GetComponent<HeroHealth>();
-        anim = GetComponent <Animator> ();
+        anim = GetComponent<Animator>();
+        swingID = 0;
     }
 
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject == enemy)
+        if (other.gameObject == enemy)
         {
             enemyInRange = true;
         }
@@ -39,22 +41,23 @@ public class PlayerAttack : MonoBehaviour
         return playerIsAttacking;
     }
 
-    void OnTriggerExit (Collider other)
+    void OnTriggerExit(Collider other)
     {
-        if(other.gameObject == enemy)
+        if (other.gameObject == enemy)
         {
             enemyInRange = false;
         }
     }
 
 
-    void Update ()
+    void Update()
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks &&  playerHealth.currentHealth > 0)
+        if (timer >= timeBetweenAttacks && playerHealth.currentHealth > 0)
         {
-            if (Input.GetMouseButtonUp(0)) {
+            if (Input.GetMouseButtonUp(0))
+            {
                 Attack();
             }
         }
@@ -71,17 +74,25 @@ public class PlayerAttack : MonoBehaviour
     }
 
 
-    void Attack ()
+    void Attack()
     {
         timer = 0f;
 
-        if(playerHealth.currentHealth > 0)
+        if (playerHealth.currentHealth > 0)
         {
-            playerIsAttacking = true;
+
             anim.SetTrigger("Attack6Trigger");
+            swingID++;
             //enemyHealth.TakeDamage (attackDamage);
-            
-            
+
+
         }
+    }
+
+
+    public int GetSwingID()
+    {
+        Debug.Log("getSwingID was called: " + swingID);
+        return swingID;
     }
 }

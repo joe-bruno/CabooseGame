@@ -52,7 +52,6 @@ public class HeroHealth : MonoBehaviour
 
     public void TakeDamage (int amount)
     {
-        Debug.Log("TakeDamage Was Called");
         damaged = true;
 
         currentHealth -= amount;
