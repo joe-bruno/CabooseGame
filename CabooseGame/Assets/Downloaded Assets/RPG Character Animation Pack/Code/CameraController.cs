@@ -41,6 +41,10 @@ public class CameraController : MonoBehaviour
 		{
 			rotate = 1;
 		} 
+        else if(Input.GetKey(KeyCode.DownArrow))
+        {
+            rotate = 0;
+        }
 		else
 		{
 			rotate = 0;

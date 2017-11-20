@@ -239,27 +239,35 @@ public class PlayerController : MonoBehaviour{
 		float inputHorizontal = Input.GetAxisRaw("Horizontal");
 		float inputVertical = Input.GetAxisRaw("Vertical");
 
-		//converts control input vectors into camera facing vectors
-		Transform cameraTransform = sceneCamera.transform;
-		//Forward vector relative to the camera along the x-z plane   
-		Vector3 forward = cameraTransform.TransformDirection(Vector3.forward);
-		forward.y = 0;
-		forward = forward.normalized;
-		//Right vector relative to the camera always orthogonal to the forward vector
-		Vector3 right = new Vector3(forward.z, 0, -forward.x);
-		//directional inputs
-		dv = inputDashVertical;
-		dh = inputDashHorizontal;
-		if(!isRolling){
-			targetDashDirection = dh * right + dv * -forward;
-		}
-		x = inputHorizontal;
-		z = inputVertical;
-		inputVec = x * right + z * forward;
+        //converts control input vectors into camera facing vectors
+        Transform cameraTransform = sceneCamera.transform;
+
+        //Forward vector relative to the camera along the x-z plane   
+        Vector3 forward = cameraTransform.TransformDirection(Vector3.forward);
+        forward.y = 0;
+        forward = forward.normalized;
+
+        //Right vector relative to the camera always orthogonal to the forward vector
+        Vector3 right = new Vector3(forward.z, 0, -forward.x);
+
+        //directional inputs
+        dv = inputDashVertical;
+        dh = inputDashHorizontal;
+
+        if (!isRolling)
+        {
+            targetDashDirection = dh * right + dv * -forward;
+        }
+
+        x = inputHorizontal;
+        z = inputVertical;
+
+        inputVec = x * right + z * forward;
+  
 	}
 
-	//rotate character towards direction moved
 	void RotateTowardsMovementDir(){
+        // If movement is backwards..dont rotate, just move back with the player
 		if(inputVec != Vector3.zero && !isStrafing && !isRolling){
 			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(inputVec), Time.deltaTime * rotationSpeed);
 		}
