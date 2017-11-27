@@ -73,7 +73,6 @@
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\ScreenSpaceAmbientObscurance.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
      <Compile Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Scripts\Triangles.cs" />
-     <Compile Include="Assets\enemyWeapon.cs" />
      <Compile Include="Assets\PlayerFollow.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Camera\CameraFollow.cs" />
@@ -81,6 +80,7 @@
      <Compile Include="Assets\Scripts\Enemy\EnemyCharacterGUI.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Enemy\enemyWeapon.cs" />
      <Compile Include="Assets\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\Scripts\Managers\GameOverManager.cs" />
      <Compile Include="Assets\Scripts\Managers\ScoreManager.cs" />

@@ -1342,81 +1342,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1046360757}
---- !u!1 &1181786079
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1181786081}
-  - component: {fileID: 1181786080}
-  m_Layer: 0
-  m_Name: EnemyManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1181786080
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181786079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76a99222b1e4a384e923ac7e86efc709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 623190757}
-  enemy: {fileID: 1223363271765390, guid: b3bb6d57b367881448deba2561a08075, type: 2}
-  spawnTime: 3
-  spawnPoints:
-  - {fileID: 1222440707}
-  playerAtt: {fileID: 623190754}
---- !u!4 &1181786081
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1181786079}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1222440707}
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1222440706
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1222440707}
-  m_Layer: 0
-  m_Name: Clubman Spawn Point
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1222440707
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1222440706}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.4, y: 0, z: 14.9}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1181786081}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1243937979
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,6 +1450,85 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1001 &1326943027
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114324482505637210, guid: a4ae62282d8ebaf41840516263bc0394,
+        type: 2}
+      propertyPath: spawnPoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114324482505637210, guid: a4ae62282d8ebaf41840516263bc0394,
+        type: 2}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 623190757}
+    - target: {fileID: 114324482505637210, guid: a4ae62282d8ebaf41840516263bc0394,
+        type: 2}
+      propertyPath: playerAtt
+      value: 
+      objectReference: {fileID: 623190754}
+    - target: {fileID: 4367841335658668, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367841335658668, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 32.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4367841335658668, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -37.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114324482505637210, guid: a4ae62282d8ebaf41840516263bc0394,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 1875711850}
+    - target: {fileID: 114324482505637210, guid: a4ae62282d8ebaf41840516263bc0394,
+        type: 2}
+      propertyPath: spawnPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 1846045027}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: a4ae62282d8ebaf41840516263bc0394, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1358635269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1778,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1548158755}
+--- !u!4 &1570001035 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4264253408092940, guid: a4ae62282d8ebaf41840516263bc0394,
+    type: 2}
+  m_PrefabInternal: {fileID: 1326943027}
 --- !u!1 &1615021893
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,15 +2052,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4515507677825000, guid: 149fd94ee7e93df47a49b2d1379c9c62, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4659327361419738, guid: 149fd94ee7e93df47a49b2d1379c9c62, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4059695168043120, guid: 149fd94ee7e93df47a49b2d1379c9c62, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114595489533590530, guid: 149fd94ee7e93df47a49b2d1379c9c62,
         type: 2}
@@ -2078,9 +2087,74 @@ Prefab:
       propertyPath: staminaSlider
       value: 
       objectReference: {fileID: 992650695}
+    - target: {fileID: 114595489533590530, guid: 149fd94ee7e93df47a49b2d1379c9c62,
+        type: 2}
+      propertyPath: staminaRegen
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 149fd94ee7e93df47a49b2d1379c9c62, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1846045026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1481715344046888, guid: a4ae62282d8ebaf41840516263bc0394,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1846045027}
+  m_Layer: 0
+  m_Name: Clubman Spawn Point (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1846045027
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4367841335658668, guid: a4ae62282d8ebaf41840516263bc0394,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1846045026}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -37.4, y: 0, z: -65.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1570001035}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1875711849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1481715344046888, guid: a4ae62282d8ebaf41840516263bc0394,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1875711850}
+  m_Layer: 0
+  m_Name: Clubman Spawn Point (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1875711850
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4367841335658668, guid: a4ae62282d8ebaf41840516263bc0394,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1875711849}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 71.25, y: 0, z: 10.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1570001035}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1929832982
 Prefab:
   m_ObjectHideFlags: 0

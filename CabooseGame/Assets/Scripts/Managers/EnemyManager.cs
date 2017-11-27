@@ -22,7 +22,7 @@ public class EnemyManager : MonoBehaviour
             return;
         }
 
-        int spawnPointIndex = 0;
+        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
 
         Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }

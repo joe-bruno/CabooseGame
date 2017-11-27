@@ -95,6 +95,7 @@ public class EnemyHealth : MonoBehaviour
         enemyController.enabled = false;
 
         weapon.weaponActive = false;
+        StartSinking();
         
 
         /* anim.SetTrigger ("Dead");
