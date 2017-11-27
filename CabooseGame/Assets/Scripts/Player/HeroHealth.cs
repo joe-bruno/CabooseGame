@@ -8,6 +8,7 @@ public class HeroHealth : MonoBehaviour
 {
     public int startingHealth = 100;
     public int currentHealth;
+    public int maxHealth;
     public Slider healthSlider;
     public Image damageImage;
     //public AudioClip deathClip;
@@ -22,6 +23,7 @@ public class HeroHealth : MonoBehaviour
     //PlayerShooting playerShooting;
     bool isDead;
     bool damaged;
+    int swingID;
 
 
     void Awake ()
@@ -32,6 +34,7 @@ public class HeroHealth : MonoBehaviour
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
         playerRBody = GetComponent<Rigidbody>();
+        maxHealth = startingHealth;
         
     }
 
@@ -41,28 +44,35 @@ public class HeroHealth : MonoBehaviour
         if(damaged)
         {
             damageImage.color = flashColour;
+            healthSlider.value = currentHealth;
         }
         else
         {
             damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
+        
     }
 
 
-    public void TakeDamage (int amount)
+
+    public void TakeDamage(int amount, int newSwingID)
     {
-        damaged = true;
+        if (isDead)
+            return;
 
-        currentHealth -= amount;
-
-        healthSlider.value = currentHealth;
-
-       // playerAudio.Play ();
-
-        if(currentHealth <= 0 && !isDead)
+        if (newSwingID != swingID)
         {
-            Death ();
+            currentHealth -= amount;
+            anim.SetTrigger("GetHit1Trigger");
+            swingID = newSwingID;
+            damaged = true;
+            
+        }
+
+        if (currentHealth <= 0 && !isDead)
+        {
+            Death();
         }
     }
 

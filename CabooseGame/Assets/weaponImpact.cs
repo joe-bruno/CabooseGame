@@ -8,6 +8,7 @@ public class weaponImpact : MonoBehaviour {
     bool playerIsAttacking;
     int swingID;
     int newSwingID;
+    int takeDamageReturn;
     
     
 	// Use this for initialization
@@ -29,7 +30,11 @@ public class weaponImpact : MonoBehaviour {
             swingID = playerAttack.GetSwingID();
             
             EnemyHealth eHealth = other.gameObject.GetComponent<EnemyHealth>();
-            eHealth.TakeDamage(attackPower,swingID);
+            takeDamageReturn = eHealth.TakeDamage(attackPower,swingID);
+            if (takeDamageReturn == 1)
+            {
+                playerAttack.GainExperience(100f);
+            }
         }
     }
 }

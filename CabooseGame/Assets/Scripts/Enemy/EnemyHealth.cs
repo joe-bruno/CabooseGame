@@ -8,15 +8,15 @@ public class EnemyHealth : MonoBehaviour
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
     public AudioClip deathClip;
+    public PlayerAttack playerAtt;
     EnemyController enemyController;
     enemyWeapon weapon;
-
 
     Animator anim;
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
     CapsuleCollider capsuleCollider;
-    PlayerAttack playerAtt;
+    
     bool isDead;
     bool isSinking;
     int swingID;
@@ -30,7 +30,10 @@ public class EnemyHealth : MonoBehaviour
         enemyController = GetComponent<EnemyController>();
         capsuleCollider = GetComponent <CapsuleCollider> ();
         weapon = GetComponentInChildren<enemyWeapon>();
-        playerAtt = GetComponent<PlayerAttack>();
+        if (playerAtt != null)
+        {
+            Debug.Log("PlayerAttack sucessfully found");
+        }
         swingID = 0;
         currentHealth = startingHealth;
     }
@@ -47,20 +50,21 @@ public class EnemyHealth : MonoBehaviour
                 transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
             }
         }
+
     }
 
 
-    public void TakeDamage(int amount, int newSwingID)
+    public int TakeDamage(int amount, int newSwingID)
     {
         if(isDead)
-            return;
+            return 0;
 
         // enemyAudio.Play ();
        if (newSwingID!=swingID)
         {
         currentHealth -= amount;
         anim.SetTrigger("GetHit1Trigger");
-            swingID = newSwingID;
+        swingID = newSwingID;
         }
         
        
@@ -70,6 +74,13 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Death ();
+            Debug.Log("Returned 1");
+            return 1;
+
+        }
+        else
+        {
+            return 0;
         }
     }
 
@@ -84,6 +95,7 @@ public class EnemyHealth : MonoBehaviour
         enemyController.enabled = false;
 
         weapon.weaponActive = false;
+        
 
         /* anim.SetTrigger ("Dead");
 
