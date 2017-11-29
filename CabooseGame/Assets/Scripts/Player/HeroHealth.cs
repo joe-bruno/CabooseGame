@@ -21,7 +21,7 @@ public class HeroHealth : MonoBehaviour
     //AudioSource playerAudio;
     PlayerController playerMovement;
     //PlayerShooting playerShooting;
-    bool isDead;
+    public bool isDead;
     bool damaged;
     int swingID;
 

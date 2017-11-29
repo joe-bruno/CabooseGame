@@ -2,6 +2,7 @@
 
 public class EnemyManager : MonoBehaviour
 {
+	private GameObject playerObj;
     public HeroHealth playerHealth;
     public GameObject enemy;
     public float spawnTime = 3f;
@@ -11,13 +12,17 @@ public class EnemyManager : MonoBehaviour
 
     void Start ()
     {
+		// Get the player and pull its herohealth instance
+		playerObj = GameObject.Find("The Hero");
+		playerHealth = playerObj.GetComponent<HeroHealth> ();
+
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
 
     void Spawn ()
     {
-        if(playerHealth.currentHealth <= 0f)
+        if(playerHealth.isDead)
         {
             return;
         }
