@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 471}
   m_MaxSize: {x: 14002, y: 14021}
   vertical: 0
-  controlID: 7560
+  controlID: 3252
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 471}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 7503
+  controlID: 3253
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 7474
+  controlID: 3116
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,9 +201,9 @@ MonoBehaviour:
     height: 595
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7efbffff
-    m_LastClickedID: -1154
-    m_ExpandedIDs: b2b6feff9215ffff9efaffff9afbffff9efbffff000000009c340000
+    m_SelectedIDs: 08350000
+    m_LastClickedID: 13576
+    m_ExpandedIDs: 9efbffff000000009a3400004e3500007c35000092350000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -281,14 +281,14 @@ MonoBehaviour:
     width: 1039
     height: 595
   m_SceneLighting: 1
-  lastFramingTime: 1377.9590256746455
+  lastFramingTime: 229.85691498919795
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 208.07336, y: -177.5751, z: -367.95334}
+    m_Target: {x: -168.29384, y: 20.157808, z: 26.185247}
     speed: 2
-    m_Value: {x: 208.07336, y: -177.5751, z: -367.95334}
+    m_Value: {x: -168.29384, y: 20.157808, z: 26.185247}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -315,9 +315,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.07616887, y: 0.9204794, z: -0.22702368, w: 0.30883047}
   m_Size:
-    m_Target: 644.09045
+    m_Target: 112.146675
     speed: 2
-    m_Value: 644.09045
+    m_Value: 112.146675
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -399,11 +399,8 @@ MonoBehaviour:
     - {x: 416.7, y: 173.90002}
     - {x: 559.2, y: 268.40002}
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 84f9d613a6aa6934d8510a542fadac39,
-    type: 2}
-  m_BreadCrumbs:
-  - m_Target: {fileID: 110700000, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
-    m_ScrollPosition: {x: 0, y: 0}
+  m_AnimatorController: {fileID: 0}
+  m_BreadCrumbs: []
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
   blendTreeGraph: {fileID: 0}
@@ -479,19 +476,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Downloaded Assets/Kenney Assets/Castle Kit/Models
+    - Assets/Downloaded Assets/RPG Character Animation Pack/Elements/Materials/Stage
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Downloaded Assets/Kenney Assets/Castle Kit/Models
+  - Assets/Downloaded Assets/RPG Character Animation Pack/Elements/Materials/Stage
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Joe\Desktop\Game\CabooseGame
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 129}
-    m_SelectedIDs: b62c0000
-    m_LastClickedID: 11446
-    m_ExpandedIDs: 00000000ac280000062900003e2b0000ba2b0000ca2b0000b62c0000e42c0000462d0000de2d000048300000ba300000d2300000fa30000090320000a2320000a2330000b4330000dc390000de390000e0390000e2390000e4390000e6390000e8390000ea390000ec390000ee390000f039000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 219}
+    m_SelectedIDs: c6280000
+    m_LastClickedID: 10438
+    m_ExpandedIDs: 00000000b02800000a290000422b0000be2b0000ce2b0000ba2c0000e82c00004a2d0000e22d00004c300000be300000d6300000fe30000094320000a6320000a6330000b8330000ec390000ee390000f0390000f2390000f4390000f6390000f8390000fa390000fc390000fe390000003a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -519,7 +516,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ac280000062900003e2b0000ba2b0000ca2b0000b62c0000e42c0000462d0000de2d000048300000ba300000d2300000fa30000090320000a2320000a2330000b4330000dc390000de390000e0390000e2390000e4390000e6390000e8390000ea390000ec390000ee390000f039000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b02800000a290000422b0000be2b0000ce2b0000ba2c0000e82c00004a2d0000e22d00004c300000be300000d6300000fe30000094320000a6320000a6330000b8330000ec390000ee390000f0390000f2390000f4390000f6390000f8390000fa390000fc390000fe390000003a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -544,10 +541,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7efbffff
-    m_LastClickedInstanceID: -1154
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300007e2c00001a29000076270000d8270000f62800006c2a00006626fcff5080faff60340000ea2e0000822f000000000000d42d0000f2270000f22e0000922f0000942f0000e42d0000
+    m_SelectedInstanceIDs: 08350000
+    m_LastClickedInstanceID: 13576
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300007e2c00001a29000076270000d8270000f62800006c2a00006626fcff5080faff60340000ea2e0000822f000000000000d42d0000f2270000f22e0000922f0000942f0000e42d0000a2290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

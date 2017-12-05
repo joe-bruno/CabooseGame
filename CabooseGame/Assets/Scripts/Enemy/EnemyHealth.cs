@@ -55,6 +55,7 @@ public class EnemyHealth : MonoBehaviour
         } else if(isPlayerDead())
         {
             Death();
+            Destroy(gameObject, 2f);
         }
 
     }
@@ -102,7 +103,6 @@ public class EnemyHealth : MonoBehaviour
         enemyController.enabled = false;
 
         weapon.weaponActive = false;
-        StartSinking();
     }
 
 
