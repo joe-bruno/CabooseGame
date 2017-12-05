@@ -21,10 +21,12 @@ public class EnemyHealth : MonoBehaviour
     bool isSinking;
     int swingID;
 
+    private HeroHealth playerHealth;
 
     void Awake ()
     {
         anim = GetComponent <Animator> ();
+
         // enemyAudio = GetComponent <AudioSource> ();
         // hitParticles = GetComponentInChildren <ParticleSystem> ();
         enemyController = GetComponent<EnemyController>();
@@ -41,18 +43,31 @@ public class EnemyHealth : MonoBehaviour
 
     void Update ()
     {
+        // Get current player health
+        GameObject player = GameObject.FindWithTag("Player");
+        playerHealth = player.GetComponent<HeroHealth>();
+
         if (isDead)
         {
-            
-            //StartSinking();
             if (isSinking)
             {
                 transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
             }
+        } else if(isPlayerDead())
+        {
+            Death();
         }
 
     }
 
+    private bool isPlayerDead()
+    {
+        Debug.Log("Current player Health: " + playerHealth.currentHealth);
+        if (playerHealth.currentHealth <= 0)
+            return true;
+        else
+            return false;
+    }
 
     public int TakeDamage(int amount, int newSwingID)
     {
@@ -96,14 +111,6 @@ public class EnemyHealth : MonoBehaviour
 
         weapon.weaponActive = false;
         StartSinking();
-        
-
-        /* anim.SetTrigger ("Dead");
-
-        enemyAudio.clip = deathClip;
-        enemyAudio.Play (); */
-
-
     }
 
 
