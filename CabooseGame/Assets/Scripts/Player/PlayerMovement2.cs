@@ -2,7 +2,7 @@
 
 public class PlayerMovement2 : MonoBehaviour
 {
-    public float speed = 6f;
+    public float speed = 10f;
 
     Vector3 movement;
     Animator anim;

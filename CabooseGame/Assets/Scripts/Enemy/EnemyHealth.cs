@@ -43,7 +43,6 @@ public class EnemyHealth : MonoBehaviour
 
     void Update ()
     {
-        // Get current player health
         GameObject player = GameObject.FindWithTag("Player");
         playerHealth = player.GetComponent<HeroHealth>();
 
@@ -62,7 +61,6 @@ public class EnemyHealth : MonoBehaviour
 
     private bool isPlayerDead()
     {
-        Debug.Log("Current player Health: " + playerHealth.currentHealth);
         if (playerHealth.currentHealth <= 0)
             return true;
         else
@@ -74,22 +72,16 @@ public class EnemyHealth : MonoBehaviour
         if(isDead)
             return 0;
 
-        // enemyAudio.Play ();
        if (newSwingID!=swingID)
         {
         currentHealth -= amount;
         anim.SetTrigger("GetHit1Trigger");
         swingID = newSwingID;
         }
-        
-       
-        // hitParticles.transform.position = hitPoint;
-        // hitParticles.Play();
 
         if (currentHealth <= 0)
         {
             Death ();
-            Debug.Log("Returned 1");
             return 1;
 
         }
