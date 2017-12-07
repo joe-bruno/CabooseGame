@@ -9,13 +9,8 @@ public class EnemyManager : MonoBehaviour
     public Transform[] spawnPoints;
     public PlayerAttack playerAtt;
 
-
     void Start ()
     {
-		// Get the player and pull its herohealth instance
-		playerObj = GameObject.Find("The Hero");
-		playerHealth = playerObj.GetComponent<HeroHealth> ();
-
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
