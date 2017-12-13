@@ -133,13 +133,13 @@ public class PlayerAttack : MonoBehaviour
             experienceThreshold = experienceThreshold * 1.1f;
             LevelUp();
         }
-        experienceSlider.value = (experience / experienceThreshold)*100;
+        experienceSlider.value = (experience / experienceThreshold) * 100;
     }
     public void LevelUp()
     {
         level++;
         levelDisplay.text = "Level: " + level;
-        attackDamage = (attackDamage)/2 * 3;
+        attackDamage = (attackDamage) / 2 * 3;
         if (staminaPerSwing > 15)
         {
             staminaPerSwing = staminaPerSwing / 4 * 3;

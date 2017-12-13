@@ -25,10 +25,10 @@ public class WaveAttack : MonoBehaviour {
         {
 
             EnemyHealth eHealth = other.gameObject.GetComponent<EnemyHealth>();
-            takeDamageReturn = eHealth.TakeDamage(attackPower, force);
+            //takeDamageReturn = eHealth.TakeDamage(attackPower, force);
             if (takeDamageReturn == 1)
             {
-                playerAttack.GainExperience(100f);
+                //playerAttack.GainExperience(100f);
             }
         }
     }

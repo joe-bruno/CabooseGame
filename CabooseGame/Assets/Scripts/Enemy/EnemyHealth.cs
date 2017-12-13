@@ -8,114 +8,71 @@ public class EnemyHealth : MonoBehaviour
     public float sinkSpeed = 2.5f;
     public int scoreValue = 10;
     public AudioClip deathClip;
-    public PlayerAttack playerAtt;
-    public Rigidbody rb;
-    public int swingID;
-    public EnemyAttack enemyAttack;
     EnemyController enemyController;
     enemyWeapon weapon;
+
 
     Animator anim;
     AudioSource enemyAudio;
     ParticleSystem hitParticles;
     CapsuleCollider capsuleCollider;
-    
-    public bool isDead;
+    PlayerAttack playerAtt;
+    bool isDead;
     bool isSinking;
-    
+    int swingID;
 
-    private HeroHealth playerHealth;
 
     void Awake ()
     {
         anim = GetComponent <Animator> ();
-        rb = GetComponent<Rigidbody>();
         // enemyAudio = GetComponent <AudioSource> ();
         // hitParticles = GetComponentInChildren <ParticleSystem> ();
         enemyController = GetComponent<EnemyController>();
         capsuleCollider = GetComponent <CapsuleCollider> ();
         weapon = GetComponentInChildren<enemyWeapon>();
-        if (playerAtt != null)
-        {
-            Debug.Log("PlayerAttack sucessfully found");
-        }
-        swingID = playerAtt.swingID;
+        playerAtt = GetComponent<PlayerAttack>();
+        swingID = 0;
         currentHealth = startingHealth;
     }
 
 
     void Update ()
     {
-        GameObject player = GameObject.FindWithTag("Player");
-        playerHealth = player.GetComponent<HeroHealth>();
-
         if (isDead)
         {
+            
+            //StartSinking();
             if (isSinking)
             {
                 transform.Translate(-Vector3.up * sinkSpeed * Time.deltaTime);
             }
-        } else if(isPlayerDead())
-        {
-            Death();
-            Destroy(gameObject, 2f);
         }
-
     }
 
-    private bool isPlayerDead()
-    {
-        if (playerHealth.currentHealth <= 0)
-            return true;
-        else
-            return false;
-    }
 
     public int TakeDamage(int amount, int newSwingID)
     {
         if(isDead)
             return 0;
 
+        // enemyAudio.Play ();
        if (newSwingID!=swingID)
         {
         currentHealth -= amount;
         anim.SetTrigger("GetHit1Trigger");
-        enemyAttack.toggleWeaponCollider(false);
-        swingID = newSwingID;
+            swingID = newSwingID;
         }
+        
+       
+        // hitParticles.transform.position = hitPoint;
+        // hitParticles.Play();
 
         if (currentHealth <= 0)
         {
             Death ();
             return 1;
-
         }
-        else
-        {
-            return 0;
-        }
-    }
-
-    public int TakeDamage(int amount, float force)
-    {
-        if (isDead)
-        {
-            return 0;
-        }
-        anim.SetTrigger("GetHit1Trigger");
-        currentHealth -= amount;
-        rb.AddForce(transform.forward * force);
-
-        if (currentHealth <= 0)
-        {
-            Death();
-            return 1;
-
-        }
-        else
-        {
-            return 0;
-        }
+        return 0;
     }
 
 
@@ -127,8 +84,17 @@ public class EnemyHealth : MonoBehaviour
 
         enemyController.enemyDeath();
         enemyController.enabled = false;
+        if (weapon != null)
+        {
+            weapon.weaponActive = false;
+        }
 
-        weapon.weaponActive = false;
+        /* anim.SetTrigger ("Dead");
+
+        enemyAudio.clip = deathClip;
+        enemyAudio.Play (); */
+
+
     }
 
 

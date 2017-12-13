@@ -2,34 +2,28 @@
 
 public class EnemyManager : MonoBehaviour
 {
-	public GameObject playerObj;
     public HeroHealth playerHealth;
     public GameObject enemy;
-    public GameObject enemy2;
     public float spawnTime = 3f;
     public Transform[] spawnPoints;
-    public PlayerAttack playerAtt;
-    public Transform[] spawnPoints2;
+
 
     void Start ()
     {
-		// Get the player and pull its herohealth instance
-		playerObj = GameObject.FindGameObjectWithTag("Player");
-		//playerHealth = playerObj.GetComponent<HeroHealth> ();
-
+        playerHealth = GameObject.FindGameObjectWithTag("Player").GetComponent<HeroHealth>();
         InvokeRepeating ("Spawn", spawnTime, spawnTime);
     }
 
 
     void Spawn ()
     {
-        if(playerHealth.isDead)
+        if(playerHealth.currentHealth <= 0f)
         {
             return;
         }
 
-        int spawnPointIndex = Random.Range(0, spawnPoints.Length);
-        Instantiate(enemy2, spawnPoints2[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
+        int spawnPointIndex = 0;
+
         Instantiate (enemy, spawnPoints[spawnPointIndex].position, spawnPoints[spawnPointIndex].rotation);
     }
 }

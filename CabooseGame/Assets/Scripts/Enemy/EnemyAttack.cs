@@ -22,19 +22,19 @@ public class EnemyAttack : MonoBehaviour
     float swingTimer;
 
 
-    void Awake ()
+    void Awake()
     {
-        player = GameObject.FindGameObjectWithTag ("Player");
-        playerHealth = player.GetComponent <HeroHealth> ();
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerHealth = player.GetComponent<HeroHealth>();
         enemyHealth = GetComponent<EnemyHealth>();
-        anim = GetComponent <Animator> ();
+        anim = GetComponent<Animator>();
     }
 
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        
-        if(other.gameObject.tag == "Player")
+
+        if (other.gameObject.tag == "Player")
         {
             Debug.Log("Player Collided With!");
             playerInRange = true;
@@ -42,7 +42,7 @@ public class EnemyAttack : MonoBehaviour
     }
 
 
-    void OnTriggerExit (Collider other)
+    void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
@@ -51,21 +51,21 @@ public class EnemyAttack : MonoBehaviour
     }
 
 
-    void Update ()
+    void Update()
     {
         timer += Time.deltaTime;
         swingTimer += Time.deltaTime;
         Debug.Log(timer);
         Debug.Log(playerInRange);
         Debug.Log(enemyHealth.currentHealth);
-        if ((timer >= timeBetweenAttacks) && playerInRange &&  (enemyHealth.currentHealth > 0))
+        if ((timer >= timeBetweenAttacks) && playerInRange && (enemyHealth.currentHealth > 0))
         {
             Debug.Log("Enemy Attacking!!");
-            Attack ();
+            Attack();
             swingTimer = 0;
         }
 
-        if(playerHealth.currentHealth <= 0)
+        if (playerHealth.currentHealth <= 0)
         {
             //anim.SetTrigger ("PlayerDead");
         }
@@ -81,11 +81,11 @@ public class EnemyAttack : MonoBehaviour
     }
 
 
-    void Attack ()
+    void Attack()
     {
         timer = 0f;
 
-        if(playerHealth.currentHealth > 0)
+        if (playerHealth.currentHealth > 0)
         {
             //playerHealth.TakeDamage (attackDamage);
             anim.SetTrigger("Attack3Trigger");

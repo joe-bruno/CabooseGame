@@ -1816,7 +1816,7 @@ Animator:
   m_GameObject: {fileID: 1223363271765390}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: e42d9259129992a4d95e0b320ca2a43d, type: 3}
-  m_Controller: {fileID: 9100000, guid: 84f9d613a6aa6934d8510a542fadac39, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2047b3b57fc461c4d9db6e81ddf74d19, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 1
   m_ApplyRootMotion: 0
@@ -1906,7 +1906,7 @@ MonoBehaviour:
   swingID: 0
   weapon: {fileID: 64197122828911680}
   weaponActive: 0
-  swingDelay: 0.5
+  swingDelay: 0
 --- !u!114 &114510778638034670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1972,12 +1972,6 @@ MonoBehaviour:
   sinkSpeed: 2.5
   scoreValue: 10
   deathClip: {fileID: 0}
-  playerAtt: {fileID: 114595489533590530, guid: 149fd94ee7e93df47a49b2d1379c9c62,
-    type: 2}
-  rb: {fileID: 0}
-  swingID: 0
-  enemyAttack: {fileID: 114475070895193704}
-  isDead: 0
 --- !u!114 &114900746955392026
 MonoBehaviour:
   m_ObjectHideFlags: 1

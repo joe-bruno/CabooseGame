@@ -135,8 +135,8 @@ public class PlayerController : MonoBehaviour{
 			}
 			//if strafing
 			if(Input.GetKey(KeyCode.LeftShift) || Input.GetAxisRaw("TargetBlock") > .1 && canAction){  
-				//isStrafing = true;
-				//animator.SetBool("Strafing", true);
+				isStrafing = true;
+				animator.SetBool("Strafing", true);
 				if(Input.GetButtonDown("CastL") && canAction && isGrounded){
 					CastAttack(1);
 				}
