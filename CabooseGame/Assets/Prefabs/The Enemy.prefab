@@ -1795,12 +1795,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 379e2a8a5063a3e4e936134a16132415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 1890560846325988, guid: 149fd94ee7e93df47a49b2d1379c9c62, type: 2}
   targetDashDirection: {x: 0, y: 0, z: 0}
   sceneCamera: {fileID: 0}
   useNavMesh: 1
   goal: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 4132264950950256, guid: 149fd94ee7e93df47a49b2d1379c9c62, type: 2}
   gravity: -9.8
   canJump: 0
   isGrounded: 0
@@ -1851,6 +1851,8 @@ MonoBehaviour:
   deathClip: {fileID: 0}
   playerAtt: {fileID: 114595489533590530, guid: 149fd94ee7e93df47a49b2d1379c9c62,
     type: 2}
+  rb: {fileID: 54962111942023286}
+  isDead: 0
 --- !u!135 &135207109807440102
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -1870,7 +1872,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1223363271765390}
   m_Material: {fileID: 13400000, guid: 921fe1ba2c0c25c439e3809ef003cff2, type: 2}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2.5

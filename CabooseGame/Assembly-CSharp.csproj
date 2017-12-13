@@ -52,8 +52,6 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Animations\Melee Axe Pack\Demo\CameraScroll.cs" />
-     <Compile Include="Assets\Downloaded Assets\Characters\RollerBall\Scripts\Ball.cs" />
-     <Compile Include="Assets\Downloaded Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonCharacter.cs" />
      <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
@@ -90,6 +88,7 @@
      <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerMovement2.cs" />
      <Compile Include="Assets\Scripts\Player\PlayerShooting.cs" />
+     <Compile Include="Assets\Scripts\Player\WaveAttack.cs" />
      <Compile Include="Assets\weaponImpact.cs" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -151,7 +150,6 @@
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\BlendModesOverlay.shader" />
-     <None Include="Assets\Downloaded Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\SimpleClear.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\Downloaded Assets\FreeWeapons\Read_me.txt" />

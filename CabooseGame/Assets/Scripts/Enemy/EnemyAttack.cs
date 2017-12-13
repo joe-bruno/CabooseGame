@@ -30,8 +30,10 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.gameObject == player)
+        
+        if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Player Collided With!");
             playerInRange = true;
         }
     }
@@ -39,7 +41,7 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerExit (Collider other)
     {
-        if(other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
             playerInRange = false;
         }

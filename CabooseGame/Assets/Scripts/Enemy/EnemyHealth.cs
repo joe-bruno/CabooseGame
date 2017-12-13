@@ -9,6 +9,7 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
     public PlayerAttack playerAtt;
+    public Rigidbody rb;
     EnemyController enemyController;
     enemyWeapon weapon;
 
@@ -26,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
     void Awake ()
     {
         anim = GetComponent <Animator> ();
-
+        rb = GetComponent<Rigidbody>();
         // enemyAudio = GetComponent <AudioSource> ();
         // hitParticles = GetComponentInChildren <ParticleSystem> ();
         enemyController = GetComponent<EnemyController>();
@@ -83,6 +84,28 @@ public class EnemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Death ();
+            return 1;
+
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public int TakeDamage(int amount, float force)
+    {
+        if (isDead)
+        {
+            return 0;
+        }
+        anim.SetTrigger("GetHit1Trigger");
+        currentHealth -= amount;
+        rb.AddForce(transform.forward * force);
+
+        if (currentHealth <= 0)
+        {
+            Death();
             return 1;
 
         }
