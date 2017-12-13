@@ -112,7 +112,6 @@
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\PrepareSunShaftsBlur.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\BlendModesOverlay.shader" />
-     <None Include="Assets\Downloaded Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\SimpleClear.shader" />
      <None Include="Assets\Downloaded Assets\RPG Character Animation Pack\Elements\ImageEffects\Shaders\_Antialiasing\FXAA3Console.shader" />
      <None Include="Assets\Downloaded Assets\FreeWeapons\Read_me.txt" />

@@ -9,6 +9,9 @@ public class EnemyHealth : MonoBehaviour
     public int scoreValue = 10;
     public AudioClip deathClip;
     public PlayerAttack playerAtt;
+    public Rigidbody rb;
+    public int swingID;
+    public EnemyAttack enemyAttack;
     EnemyController enemyController;
     enemyWeapon weapon;
 
@@ -19,14 +22,14 @@ public class EnemyHealth : MonoBehaviour
     
     public bool isDead;
     bool isSinking;
-    int swingID;
+    
 
     private HeroHealth playerHealth;
 
     void Awake ()
     {
         anim = GetComponent <Animator> ();
-
+        rb = GetComponent<Rigidbody>();
         // enemyAudio = GetComponent <AudioSource> ();
         // hitParticles = GetComponentInChildren <ParticleSystem> ();
         enemyController = GetComponent<EnemyController>();
@@ -36,7 +39,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Debug.Log("PlayerAttack sucessfully found");
         }
-        swingID = 0;
+        swingID = playerAtt.swingID;
         currentHealth = startingHealth;
     }
 
@@ -77,12 +80,35 @@ public class EnemyHealth : MonoBehaviour
         {
         currentHealth -= amount;
         anim.SetTrigger("GetHit1Trigger");
+        enemyAttack.toggleWeaponCollider(false);
         swingID = newSwingID;
         }
 
         if (currentHealth <= 0)
         {
             Death ();
+            return 1;
+
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
+    public int TakeDamage(int amount, float force)
+    {
+        if (isDead)
+        {
+            return 0;
+        }
+        anim.SetTrigger("GetHit1Trigger");
+        currentHealth -= amount;
+        rb.AddForce(transform.forward * force);
+
+        if (currentHealth <= 0)
+        {
+            Death();
             return 1;
 
         }

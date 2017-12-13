@@ -9,7 +9,9 @@ public class EnemyAttack : MonoBehaviour
     public int attackDamage = 10;
     public float attackRange = 2.5f;
     public int swingID;
-
+    public Collider weapon;
+    public bool weaponActive;
+    public float swingDelay;
 
     Animator anim;
     GameObject player;
@@ -17,6 +19,7 @@ public class EnemyAttack : MonoBehaviour
     EnemyHealth enemyHealth;
     bool playerInRange;
     float timer;
+    float swingTimer;
 
 
     void Awake ()
@@ -30,8 +33,10 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.gameObject == player)
+        
+        if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Player Collided With!");
             playerInRange = true;
         }
     }
@@ -39,7 +44,7 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerExit (Collider other)
     {
-        if(other.gameObject == player)
+        if (other.gameObject.tag == "Player")
         {
             playerInRange = false;
         }
@@ -49,16 +54,30 @@ public class EnemyAttack : MonoBehaviour
     void Update ()
     {
         timer += Time.deltaTime;
-
-        if((timer >= timeBetweenAttacks) && playerInRange &&  (enemyHealth.currentHealth > 0))
+        swingTimer += Time.deltaTime;
+        Debug.Log(timer);
+        Debug.Log(playerInRange);
+        Debug.Log(enemyHealth.currentHealth);
+        if ((timer >= timeBetweenAttacks) && playerInRange &&  (enemyHealth.currentHealth > 0))
         {
+            Debug.Log("Enemy Attacking!!");
             Attack ();
+            swingTimer = 0;
         }
 
         if(playerHealth.currentHealth <= 0)
         {
             //anim.SetTrigger ("PlayerDead");
         }
+
+        if (swingTimer >= swingDelay)
+        {
+            if (!weaponActive)
+            {
+                toggleWeaponCollider(true);
+            }
+        }
+
     }
 
 
@@ -72,11 +91,23 @@ public class EnemyAttack : MonoBehaviour
             anim.SetTrigger("Attack3Trigger");
             swingID++;
         }
+        toggleWeaponCollider(false);
     }
 
     public int GetSwingID()
     {
         Debug.Log("getSwingID was called: " + swingID);
         return swingID;
+    }
+
+    public void toggleWeaponCollider(bool toggle)
+    {
+        if (toggle)
+        {
+            weapon.enabled = true;
+            weaponActive = true;
+        }
+        else weapon.enabled = false;
+        weaponActive = false;
     }
 }

@@ -19,6 +19,8 @@ public class PlayerAttack : MonoBehaviour
     public Text levelDisplay;
     public Text killCount;
     public int staminaRegen;
+    public GameObject waveZone;
+    public Collider waveCollider;
 
     Animator anim;
     GameObject enemy;
@@ -68,13 +70,23 @@ public class PlayerAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= timeBetweenAttacks && playerHealth.currentHealth > 0 && stamina >= staminaPerSwing)
+        if (timer >= timeBetweenAttacks && playerHealth.currentHealth > 0)
         {
-            if (Input.GetMouseButtonUp(0))
+            if (Input.GetMouseButtonUp(0) && stamina >= staminaPerSwing)
             {
                 Attack();
                 stamina -= staminaPerSwing;
             }
+            if (Input.GetMouseButtonUp(1) && stamina >= staminaPerSwing)
+            {
+                WaveAttack();
+                stamina -= staminaPerSwing;
+            }
+        }
+
+        if (timer >= 2f)
+        {
+            EndWaveAttack();
         }
 
         if (timer >= 1f && stamina < 100)
@@ -134,5 +146,14 @@ public class PlayerAttack : MonoBehaviour
         }
         playerHealth.maxHealth += 25;
         playerHealth.currentHealth += (playerHealth.maxHealth - playerHealth.currentHealth);
+    }
+
+    public void WaveAttack()
+    {
+        waveZone.SetActive(true);
+    }
+    public void EndWaveAttack()
+    {
+        waveZone.SetActive(false);
     }
 }
