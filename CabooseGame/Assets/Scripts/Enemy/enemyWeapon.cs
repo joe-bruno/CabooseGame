@@ -9,6 +9,7 @@ public class enemyWeapon : MonoBehaviour {
     public bool weaponActive = true;
     HeroHealth playerHealth;
     GameObject player;
+    float swingTimer;
 
     int swingID;
     int newSwingID;
@@ -23,6 +24,7 @@ public class enemyWeapon : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //playerIsAttacking = player.GetIsAttacking();
+        
     }
     
     void OnTriggerEnter(Collider other)
