@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 1134294697690608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.48, y: 1.687, z: 0.782}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4823590755830238}
   m_Father: {fileID: 0}
@@ -80,7 +80,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1474999809622678}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -168,5 +168,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a68ac1d5e4eecb468161681cad4bfa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 25
+  attackPower: 5
   weaponActive: 1

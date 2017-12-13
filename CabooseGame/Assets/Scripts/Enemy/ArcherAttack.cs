@@ -5,14 +5,16 @@ using System.Collections;
 
 public class ArcherAttack : MonoBehaviour
 {
-    public float timeBetweenAttacks = 0.5f;
-    public int attackDamage = 10;
+    public float timeBetweenAttacks = 0.75f;
     public float attackRange = 2.5f;
     public float minRange = 10f;
+    public Transform firePoint;
+    public GameObject arrow;
+    public float thrust = 1000f;
 
     Animator anim;
     GameObject player;
-    HeroHealth playerHealth;
+    public HeroHealth playerHealth;
     EnemyHealth enemyHealth;
     bool playerInRange;
     float timer;
@@ -23,10 +25,11 @@ public class ArcherAttack : MonoBehaviour
     void Awake ()
     {
         player = GameObject.FindGameObjectWithTag ("Player");
-        playerHealth = player.GetComponent <HeroHealth> ();
+        //playerHealth = player.GetComponent <HeroHealth> ();
         enemyHealth = GetComponent<EnemyHealth>();
         anim = GetComponent <Animator> ();
         target = player.transform;
+        arrowHandler = GetComponentInParent<ArrowHandler>();
     }
 
     public Transform getTarget()
@@ -62,12 +65,11 @@ public class ArcherAttack : MonoBehaviour
         if(timer >= timeBetweenAttacks && playerInRange &&  enemyHealth.currentHealth > 0)
         {
             transform.LookAt(target);
-            Attack ();
-        }
-
-        if(playerHealth.currentHealth <= 0)
-        {
-            //anim.SetTrigger ("PlayerDead");
+            if (playerHealth.currentHealth >= 0)
+            {
+                Debug.Log("Still attacking");
+                Attack();
+            }
         }
     }
 
@@ -79,8 +81,15 @@ public class ArcherAttack : MonoBehaviour
         if(playerHealth.currentHealth > 0)
         {
             //playerHealth.TakeDamage (attackDamage);
+            Debug.Log("Inside Attack Definition");
             anim.SetTrigger("Attack3Trigger");
-            arrowHandler.LaunchArrow();
+            //arrowHandler.LaunchArrow();
+            GameObject arrowInstance = Instantiate(arrow, firePoint.position, firePoint.rotation);
+            arrowInstance.transform.LookAt(player.transform);
+            
+            arrowInstance.GetComponent<Rigidbody>().AddForce(arrowInstance.transform.forward * thrust);
+            Debug.Log(firePoint.rotation);
+            Destroy(arrowInstance, 3f);
         }
     }
     

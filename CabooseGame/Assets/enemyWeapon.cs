@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class enemyWeapon : MonoBehaviour {
-    public int attackPower = 25;
+    public int attackPower;
     public bool weaponActive = true;
     HeroHealth playerHealth;
     GameObject player;
@@ -27,6 +27,7 @@ public class enemyWeapon : MonoBehaviour {
         {  
             HeroHealth hHealth = other.gameObject.GetComponent<HeroHealth>();
             hHealth.TakeDamage(attackPower);
+            Debug.Log(attackPower);
         }
     }
 }

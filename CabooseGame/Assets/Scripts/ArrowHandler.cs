@@ -15,7 +15,7 @@ public class ArrowHandler : MonoBehaviour
 
     void Start()
     {
-        archerScript = GetComponent<ArcherAttack>();
+        archerScript = gameObject.GetComponent<ArcherAttack>();
         arrow = GameObject.FindGameObjectWithTag("Arrow");
         rb = arrow.GetComponent<Rigidbody>();
         
