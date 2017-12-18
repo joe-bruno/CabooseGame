@@ -68,33 +68,27 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
+        // Used for delaying future attacks
         timer += Time.deltaTime;
 
         if (timer >= timeBetweenAttacks && playerHealth.currentHealth > 0)
         {
+            // Basic attack
             if (Input.GetMouseButtonUp(0) && stamina >= staminaPerSwing)
             {
                 Attack();
                 stamina -= staminaPerSwing;
             }
-            if (Input.GetMouseButtonUp(1) && stamina >= staminaPerSwing)
-            {
-                WaveAttack();
-                stamina -= staminaPerSwing;
-            }
-        }
-
-        if (timer >= 2f)
-        {
-            EndWaveAttack();
         }
 
         if (timer >= 1f && stamina < 100)
         {
+            // Regenerate stamina 
             stamina += staminaRegen;
         }
-        staminaSlider.value = stamina;
 
+        // Update stamina display
+        staminaSlider.value = stamina;
     }
 
 
@@ -108,7 +102,6 @@ public class PlayerAttack : MonoBehaviour
             anim.SetTrigger("Attack6Trigger");
             swingID++;
             //enemyHealth.TakeDamage (attackDamage);
-
 
         }
     }
@@ -146,14 +139,5 @@ public class PlayerAttack : MonoBehaviour
         }
         playerHealth.maxHealth += 25;
         playerHealth.currentHealth += (playerHealth.maxHealth - playerHealth.currentHealth);
-    }
-
-    public void WaveAttack()
-    {
-        waveZone.SetActive(true);
-    }
-    public void EndWaveAttack()
-    {
-        waveZone.SetActive(false);
     }
 }

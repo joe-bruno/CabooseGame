@@ -1,8 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEditor.Events;
-
-
 
 public class EnemyController : MonoBehaviour{
 	#region Variables
