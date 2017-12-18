@@ -15,6 +15,7 @@ public class HeroHealth : MonoBehaviour
     public float flashSpeed = 5f;
     public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
     Rigidbody playerRBody;
+    public PlayerAttack playerAttack;
 
 
     Animator anim;
@@ -26,49 +27,47 @@ public class HeroHealth : MonoBehaviour
     int swingID;
 
 
-    void Awake ()
+    void Awake()
     {
-        anim = GetComponent <Animator> ();
-       // playerAudio = GetComponent <AudioSource> ();
-        playerMovement = GetComponent <PlayerController> ();
+        anim = GetComponent<Animator>();
+        // playerAudio = GetComponent <AudioSource> ();
+        playerMovement = GetComponent<PlayerController>();
+        playerAttack = GetComponent<PlayerAttack>();
         //playerShooting = GetComponentInChildren <PlayerShooting> ();
         currentHealth = startingHealth;
         playerRBody = GetComponent<Rigidbody>();
         maxHealth = startingHealth;
-        
+
     }
 
 
-    void Update ()
+    void Update()
     {
-        if(damaged)
+        if (damaged)
         {
             damageImage.color = flashColour;
             healthSlider.value = currentHealth;
         }
         else
         {
-            damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
-        
+
     }
 
 
 
-    public void TakeDamage(int amount, int newSwingID)
+    public void TakeDamage(int amount)
     {
         if (isDead)
             return;
 
-        if (newSwingID != swingID)
-        {
+        
             currentHealth -= amount;
             anim.SetTrigger("GetHit1Trigger");
-            swingID = newSwingID;
             damaged = true;
-            
-        }
+            playerAttack.toggleWeaponCollider(false);
 
         if (currentHealth <= 0 && !isDead)
         {
@@ -77,7 +76,7 @@ public class HeroHealth : MonoBehaviour
     }
 
 
-    void Death ()
+    void Death()
     {
         isDead = true;
 
@@ -95,8 +94,8 @@ public class HeroHealth : MonoBehaviour
     }
 
 
-    public void RestartLevel ()
+    public void RestartLevel()
     {
-        SceneManager.LoadScene (0);
+        SceneManager.LoadScene(0);
     }
 }

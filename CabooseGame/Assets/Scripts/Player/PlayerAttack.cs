@@ -8,19 +8,24 @@ public class PlayerAttack : MonoBehaviour
     public float timeBetweenAttacks = 0.5f;
     public int attackDamage = 10;
     public bool playerIsAttacking = false;
-    public int swingID;
     public float experience;
     public int level;
     public int kills;
-    public int stamina;
-    public int staminaPerSwing;
+    public float stamina;
+    public float staminaPerSwing;
     public Slider experienceSlider;
     public Slider staminaSlider;
     public Text levelDisplay;
     public Text killCount;
-    public int staminaRegen;
+    public float staminaRegen;
     public GameObject waveZone;
     public Collider waveCollider;
+    public bool weaponActive;
+    public float swingDelay;
+    public float swingTimer;
+    public float swingLength;
+    public float regenDelay;
+    public Collider weapon;
 
     Animator anim;
     GameObject enemy;
@@ -34,13 +39,15 @@ public class PlayerAttack : MonoBehaviour
     {
         playerHealth = GetComponent<HeroHealth>();
         anim = GetComponent<Animator>();
-        swingID = 0;
         experience = 0f;
         level = 1;
         experienceThreshold = 500f;
         stamina = 100;
         staminaPerSwing = 33;
         staminaRegen = 5;
+        toggleWeaponCollider(false);
+        swingTimer = 5f;
+        regenDelay = 1.5f;
     }
 
 
@@ -68,49 +75,77 @@ public class PlayerAttack : MonoBehaviour
 
     void Update()
     {
-        // Used for delaying future attacks
         timer += Time.deltaTime;
+        swingTimer += Time.deltaTime;
 
         if (timer >= timeBetweenAttacks && playerHealth.currentHealth > 0)
         {
-            // Basic attack
             if (Input.GetMouseButtonUp(0) && stamina >= staminaPerSwing)
             {
-                Attack();
+                Attack(0);
+                swingTimer = 0f;
+                timer = 0;
                 stamina -= staminaPerSwing;
             }
+            else if (Input.GetMouseButtonUp(1) && stamina >= staminaPerSwing)
+            {
+                Attack(1);
+                swingTimer = 0f;
+                timer = 0;
+                stamina -= staminaPerSwing/3 * 2;
+            }
+            else if (Input.GetKeyUp("f") && stamina >= 99)
+            {
+                WaveAttack();
+                timer = 0;
+                stamina -= 99;
+            }
         }
-
-        if (timer >= 1f && stamina < 100)
+        
+        if (swingTimer >= swingDelay && swingTimer <= swingLength)
         {
-            // Regenerate stamina 
-            stamina += staminaRegen;
+            if (!weaponActive)
+            {
+                toggleWeaponCollider(true);
+            }
+        }
+        if (swingTimer >= swingLength)
+        {
+            if (weaponActive)
+            {
+                toggleWeaponCollider(false);
+            }
+        }
+        if (timer >= 0.25f)
+        {
+            EndWaveAttack();
         }
 
-        // Update stamina display
+        if (timer >= regenDelay && stamina < 100)
+        {
+            stamina += staminaRegen*0.1f;
+        }
         staminaSlider.value = stamina;
+
     }
 
 
-    void Attack()
+    void Attack(int attackType)
     {
         timer = 0f;
 
         if (playerHealth.currentHealth > 0)
         {
-
-            anim.SetTrigger("Attack6Trigger");
-            swingID++;
-            //enemyHealth.TakeDamage (attackDamage);
-
+            if (attackType == 0)
+            {
+                anim.SetTrigger("Attack6Trigger");
+                //enemyHealth.TakeDamage (attackDamage);
+            }
+            else
+            {
+                anim.SetTrigger("AttackKick1Trigger");
+            }
         }
-    }
-
-
-    public int GetSwingID()
-    {
-        Debug.Log("getSwingID was called: " + swingID);
-        return swingID;
     }
 
     public void GainExperience(float xp)
@@ -126,18 +161,43 @@ public class PlayerAttack : MonoBehaviour
             experienceThreshold = experienceThreshold * 1.1f;
             LevelUp();
         }
-        experienceSlider.value = (experience / experienceThreshold)*100;
+        experienceSlider.value = (experience / experienceThreshold) * 100;
     }
     public void LevelUp()
     {
         level++;
-        levelDisplay.text = "Level: " + level;
-        attackDamage = (attackDamage)/2 * 3;
+        //levelDisplay.text = "Level: " + level;
+        attackDamage = (attackDamage) / 2 * 3;
         if (staminaPerSwing > 15)
         {
             staminaPerSwing = staminaPerSwing / 4 * 3;
         }
         playerHealth.maxHealth += 25;
         playerHealth.currentHealth += (playerHealth.maxHealth - playerHealth.currentHealth);
+    }
+
+    public void WaveAttack()
+    {
+        waveZone.SetActive(true);
+    }
+    public void EndWaveAttack()
+    {
+        waveZone.SetActive(false);
+    }
+
+    public void toggleWeaponCollider(bool toggle)
+    {
+        if (toggle)
+        {
+            weapon.enabled = true;
+            weaponActive = true;
+            Debug.Log("Player Weapon set active");
+        }
+        else
+        {
+            weapon.enabled = false;
+            weaponActive = false;
+            Debug.Log("PlayerWeapon set inactive");
+        }
     }
 }

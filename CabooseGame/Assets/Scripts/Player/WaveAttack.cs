@@ -5,14 +5,13 @@ using UnityEngine;
 public class WaveAttack : MonoBehaviour {
     public PlayerAttack playerAttack;
     public int attackPower = 50;
-    public float force = 10000;
     bool playerIsAttacking;
     int takeDamageReturn;
 
     // Use this for initialization
     void Start () {
-		
-	}
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -23,9 +22,8 @@ public class WaveAttack : MonoBehaviour {
     {
         if (other.gameObject.tag == "Enemy")
         {
-
             EnemyHealth eHealth = other.gameObject.GetComponent<EnemyHealth>();
-            takeDamageReturn = eHealth.TakeDamage(attackPower, force);
+            takeDamageReturn = eHealth.TakeDamage(attackPower);
             if (takeDamageReturn == 1)
             {
                 playerAttack.GainExperience(100f);

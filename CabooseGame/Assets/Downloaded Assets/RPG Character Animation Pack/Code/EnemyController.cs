@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEditor.Events;
+
+
 
 public class EnemyController : MonoBehaviour{
 	#region Variables
@@ -13,7 +16,7 @@ public class EnemyController : MonoBehaviour{
 	public Camera sceneCamera;
 	public bool useNavMesh = true;
 	private UnityEngine.AI.NavMeshAgent agent;
-	private float navMeshSpeed;
+	public float navMeshSpeed;
 	public Transform goal;
     public Transform player; //This is to give the navMeshAgent a target for the enemies to follow
 
@@ -129,8 +132,8 @@ public class EnemyController : MonoBehaviour{
 			}
 			//if strafing
 			if(Input.GetKey(KeyCode.LeftShift) || Input.GetAxisRaw("TargetBlock") > .1 && canAction){  
-				//isStrafing = true;
-				//animator.SetBool("Strafing", true);
+				isStrafing = true;
+				animator.SetBool("Strafing", true);
 				if(Input.GetButtonDown("CastL") && canAction && isGrounded){
 					CastAttack(1);
 				}
