@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/HeroEnemyTesting.unity
+    path: Assets/_Scenes/MainMenu.unity
+    guid: 3d1cb93cd05d58049a8b4f3451a5b40e
+  - enabled: 1
+    path: Assets/_Scenes/Collosseum.unity
     guid: 4eca0901dc99cfa4294685395612ae1e
