@@ -233,6 +233,7 @@
   <ItemGroup>
     <Compile Include="Assets\_Creepy_Cat\3D Games Effects Pack Free\Example_02\InstanceExample.cs" />
     <Compile Include="Assets\Animations\Melee Axe Pack\Demo\CameraScroll.cs" />
+    <Compile Include="Assets\AudioPlayer.cs" />
     <Compile Include="Assets\Downloaded Assets\Characters\RollerBall\Scripts\Ball.cs" />
     <Compile Include="Assets\Downloaded Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
     <Compile Include="Assets\Downloaded Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" />
