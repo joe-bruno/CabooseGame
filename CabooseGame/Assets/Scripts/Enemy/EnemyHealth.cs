@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    public EnemyManager enemyManager;
     public int startingHealth = 100;
     public int currentHealth;
     public float sinkSpeed = 2.5f;
@@ -87,12 +88,8 @@ public class EnemyHealth : MonoBehaviour
             weapon.weaponActive = false;
         }
 
-        /* anim.SetTrigger ("Dead");
-
-        enemyAudio.clip = deathClip;
-        enemyAudio.Play (); */
-
-
+        // For round advancement
+        enemyManager.enemyDestroyed();
     }
 
 
